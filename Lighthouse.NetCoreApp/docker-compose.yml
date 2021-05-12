@@ -1,0 +1,13 @@
+version: "2"
+services:
+  lighthouse:
+    image: alfredherr/lighthouse:1.3
+    hostname: lighthouse
+    container_name: lighthouse
+    ports:
+      - "82:8181"
+      - "4053:4053"
+    volumes:
+      - "/demo:/demo"
+    extra_hosts:
+      - "lighthouse:127.0.0.1"

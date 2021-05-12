@@ -1,0 +1,39 @@
+{
+	"info": {
+		"name": "Akka Demo - Account Boarding",
+		"_postman_id": "97c2c8b8-fdb5-5e18-24b0-667cc1737725",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Run Simulation of Client Boarding {Greentree} MAC",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ClientName\": \"Greentree\",\n\t\"ClientAccountsFilePath\": \"./SampleData/Greentree.txt\",\n\t\"ObligationsFilePath\":\"./SampleData/Obligations/Greentree.txt\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/system/simulation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"system",
+						"simulation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
